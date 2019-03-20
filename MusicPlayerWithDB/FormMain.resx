@@ -244,7 +244,7 @@
     <value>NoControl</value>
   </data>
   <data name="Discover_bt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 27</value>
+    <value>39, 31</value>
   </data>
   <data name="Discover_bt.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
@@ -300,9 +300,6 @@
   <data name="&gt;&gt;AddPlaylist.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="name.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
   <data name="name.Width" type="System.Int32, mscorlib">
     <value>189</value>
   </data>
@@ -346,7 +343,7 @@
     <value>NoControl</value>
   </data>
   <data name="Playlists_label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 104</value>
+    <value>40, 106</value>
   </data>
   <data name="Playlists_label.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 15</value>
@@ -379,7 +376,7 @@
     <value>NoControl</value>
   </data>
   <data name="favSongs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 63</value>
+    <value>39, 64</value>
   </data>
   <data name="favSongs.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 20</value>
@@ -415,7 +412,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 627</value>
+    <value>246, 603</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
     <value>80</value>
@@ -490,7 +487,7 @@
     <value>0, 0</value>
   </data>
   <data name="mainWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>928, 631</value>
+    <value>928, 607</value>
   </data>
   <data name="mainWindow.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -520,7 +517,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1179, 631</value>
+    <value>1179, 607</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
     <value>250</value>
@@ -561,6 +558,27 @@
   <data name="splitContainer1.Panel1MinSize" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
+  <data name="volumeSlider1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1042, 29</value>
+  </data>
+  <data name="volumeSlider1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 16</value>
+  </data>
+  <data name="volumeSlider1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;volumeSlider1.Name" xml:space="preserve">
+    <value>volumeSlider1</value>
+  </data>
+  <data name="&gt;&gt;volumeSlider1.Type" xml:space="preserve">
+    <value>NAudio.Gui.VolumeSlider, NAudio, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;volumeSlider1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;volumeSlider1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="splitContainer1.Panel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
@@ -580,7 +598,7 @@
     <value>1179, 678</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>631</value>
+    <value>607</value>
   </data>
   <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
     <value>1</value>
@@ -632,7 +650,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD6
-        BwAAAk1TRnQBSQFMAwEBAAE4AQABOAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        BwAAAk1TRnQBSQFMAwEBAAGYAQABmAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm

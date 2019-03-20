@@ -35,12 +35,13 @@ namespace MusicPlayerWithDB
         private void Form1_Load(object sender, EventArgs e)
         {
             mainWindow.View = View.LargeIcon;
-            Username.Text = user.username + " ▼";
-            user.UpdatePlaylists();
-            foreach (Playlist p in user.playlists)
-            {
-                var lvi = new ListViewItem(p.title);
+            Username.Text = user.GetUsername() + " ▼";
 
+            user.UpdatePlaylists();
+            var userPlaylists = user.GetPlaylists();
+            foreach (Playlist p in userPlaylists)
+            {
+                var lvi = new ListViewItem(p.GetTitle());
                 Playlists.Items.Add(lvi);
             }
 
@@ -75,12 +76,14 @@ namespace MusicPlayerWithDB
             mainWindow.View = View.Details;
 
             user.UpdateFavSongs();
-            foreach (Song new_song in user.fav_songs)
+            var userFavSongs = user.GetFavSongs();
+            foreach (Song new_song in userFavSongs)
             {
-                var new_song_lvi = new ListViewItem(new_song.title);
-                new_song_lvi.SubItems.Add(new_song.album_name);
-                new_song_lvi.SubItems.Add(new_song.artist_name);
-                new_song_lvi.SubItems.Add(new_song.length.ToString());
+                (string title, string album, string artist, int length) = new_song.GetTitleArtistAlbumLength();
+                var new_song_lvi = new ListViewItem(title);
+                new_song_lvi.SubItems.Add(album);
+                new_song_lvi.SubItems.Add(artist);
+                new_song_lvi.SubItems.Add(length.ToString());
                 mainWindow.Items.Add(new_song_lvi);
             }
         }
@@ -96,18 +99,21 @@ namespace MusicPlayerWithDB
             var songs = new List<Song>();
 
             string playlistSelected = Playlists.SelectedItems[0].Text;
-            foreach (Playlist playlist in user.playlists)
+            var userPlaylists = user.GetPlaylists();
+
+            foreach (Playlist playlist in userPlaylists)
             {
-                if (playlist.title == playlistSelected)
-                    songs = playlist.songs;
+                if (playlist.GetTitle() == playlistSelected)
+                    songs = playlist.GetSongs();
             }
 
             foreach (Song song in songs)
             {
-                ListViewItem song_lvi = new ListViewItem(song.title);
-                song_lvi.SubItems.Add(song.album_name);
-                song_lvi.SubItems.Add(song.artist_name);
-                song_lvi.SubItems.Add(song.length.ToString());
+                (string title, string album, string artist, int length) = song.GetTitleArtistAlbumLength();
+                ListViewItem song_lvi = new ListViewItem(title);
+                song_lvi.SubItems.Add(album);
+                song_lvi.SubItems.Add(artist);
+                song_lvi.SubItems.Add(length.ToString());
                 mainWindow.Items.Add(song_lvi);
             }
         }
@@ -128,10 +134,11 @@ namespace MusicPlayerWithDB
                 MessageBox.Show(ex.Message);
             }
             Playlists.Items.Clear();
-            foreach (Playlist p in user.playlists)
-            {
-                var lvi = new ListViewItem(p.title);
 
+            var userPlaylists = user.GetPlaylists();
+            foreach (Playlist p in userPlaylists)
+            {
+                var lvi = new ListViewItem(p.GetTitle());
                 Playlists.Items.Add(lvi);
             }
         }

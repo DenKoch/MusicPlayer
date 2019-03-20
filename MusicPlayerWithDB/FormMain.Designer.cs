@@ -42,12 +42,14 @@
             this.song_album = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.song_artist = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.song_length = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.volumeSlider1 = new NAudio.Gui.VolumeSlider();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.artistsTableAdapter1 = new MusicPlayerWithDB.DataSetMainTableAdapters.ArtistsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -78,6 +80,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.splitContainer1.Panel2.Controls.Add(this.volumeSlider1);
             resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.White;
             // 
@@ -220,6 +223,11 @@
             // 
             resources.ApplyResources(this.song_length, "song_length");
             // 
+            // volumeSlider1
+            // 
+            resources.ApplyResources(this.volumeSlider1, "volumeSlider1");
+            this.volumeSlider1.Name = "volumeSlider1";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -257,6 +265,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -298,6 +307,7 @@
         private System.Windows.Forms.ImageList imageListForPlaylists;
         private System.Windows.Forms.ColumnHeader name;
         private DataSetMainTableAdapters.ArtistsTableAdapter artistsTableAdapter1;
+        private NAudio.Gui.VolumeSlider volumeSlider1;
     }
 }
 

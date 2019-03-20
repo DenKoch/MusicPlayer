@@ -4,15 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicPlayerWithDB {
-    class Playlist {
-        public string title;
-        public int playlist_id;
+namespace MusicPlayerWithDB
+{
+    class Playlist
+    {
+        private string title;
+        private List<Song> songs;
 
-        public List<Song> songs;
+        public Playlist()
+        {
+            songs = null;
+            title = String.Empty;
+        }
 
-        public Playlist() {
-            songs = new List<Song>();
+        public Playlist(string ttl, List<Song> newSongs)
+        {
+            title = ttl;
+            songs = newSongs;
+        }
+
+
+
+
+        public string GetTitle()
+        {
+            return title;
+        }
+        public List<Song> GetSongs()
+        {
+            return songs;
         }
     }
 }

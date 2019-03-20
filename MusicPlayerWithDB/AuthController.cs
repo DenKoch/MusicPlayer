@@ -5,10 +5,8 @@ namespace MusicPlayerWithDB
 {
     class AuthController
     {
-        private string connString = ConfigurationManager.ConnectionStrings["MusicPlayerDatabaseConnectionString"].ConnectionString;
         private DataSetMainTableAdapters.UsersTableAdapter userTA;
         private DataSetMainTableAdapters.PlaylistsTableAdapter playlistTA;
-
         private DataSetMainTableAdapters.TableAdapterManager TableAdapter;
         private DataSetMain ds;
 
